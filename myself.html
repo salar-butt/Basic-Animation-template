@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myself</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .text {
+            height: 120px;
+            width: 100%;
+            background-image: linear-gradient(to right bottom, rgb(255, 0, 0), rgb(38, 78, 3) 70%);
+        }
+
+        .text>h1 {
+            position: absolute;
+            left: 35%;
+            top: 4%;
+            font-size: 50px;
+            transition: 2s;
+            color: yellow;
+        }
+
+        .text:hover h1 {
+            color: #00FFFF;
+            transition: 2s;
+            transform: skewX(20deg);
+        }
+
+        .bar{
+            position: relative;
+            left: 27%;
+            top: 25px;
+            height: 50px;
+            width: 480px;
+            border: 1px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar::after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 90%;
+            left: -90%;
+            /* background-color: black; */
+            animation: move;
+            animation-duration: 1.7s;
+            border-radius: 20px;
+            animation-timing-function:linear;
+            animation-fill-mode: forwards;
+            
+        }
+        
+        @keyframes move{
+            0%{
+                background-color: purple;
+                left:-90%;
+            }
+            25%{
+                background-color: red;
+            }
+            50%{
+                background-color: blue;
+            }
+            100%{
+                background-color: black;
+                left:0%;
+            }
+        }
+        .box{
+            position: relative;
+margin-top:-25px;       
+     left:7%;
+            height:430px;
+            border-radius: 15px;
+            width:150px;
+            border: 1px solid black;
+            background-image: linear-gradient( to bottom left,#00F8F2 ,#008D1A);
+
+        }
+        .box::after{
+            content: '';
+            height:22%;
+            width:65%;
+            position: absolute;
+            animation: circle;
+            animation-duration: 0.9s;
+            border-radius: 100px;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            top:75%;
+            left:19%;
+        }
+        @keyframes circle{
+            0%{
+                background-color: purple;
+                top:75%;
+            }
+            25%{
+                background-color: red;
+            }
+            50%{
+                background-color: blue;
+            }
+            100%{
+                background-color: black;
+                top:0%;
+            }
+        }
+        .graph{
+            position: absolute;
+            top:32%;
+            left:27.1%;
+            border-radius: 20px;
+            overflow: hidden;
+            height:360px;
+            width:480px;border: 1px solid black;
+        }
+        .graph .aqua{
+            position: absolute;
+            top:48%;
+            height:190px;
+            width:50px;
+            background-color: aqua;
+            left:10%;
+        }
+         .graph .aqua2{
+            left:27%;
+            height:140px;
+            top:62%;
+        }
+        .graph .aqua3{
+                      left:44.5%;
+        }
+        .graph .aqua4{
+            left:62%;
+            height:140px;
+            top:62%;
+        }
+        .graph .aqua5{
+                      left:80%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        <h1>ABDUL MUGHNI</h1>
+    </div>
+    <div class="bar"></div>
+    <div class="box"></div>
+    <div class="graph">
+        <div class="aqua"></div>
+        <div class="aqua aqua2"></div>
+        <div class="aqua aqua3"></div>
+        <div class="aqua aqua4"></div>
+        <div class="aqua aqua5"></div>
+
+    </div>
+
+</body>
+
+</html>
